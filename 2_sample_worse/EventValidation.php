@@ -1,16 +1,17 @@
 <?php
-namespace sampleOne;
+
+namespace sampleTwo;
 
 class EventValidation
 {
-    public static function validateEventDetails($eventData)
+    public static function validateEventDetails($request)
     {
-        self::validateParams($eventData);
-        self::validLocationLatitude($eventData['locationLatitude']);
-        self::validPostalCode($eventData['postalCode']);
+        self::validateParams($request);
+        self::validLocationLatitude($request->input('locationLatitude'));
+        self::validPostalCode($request->input('postalCode'));
     }
 
-    private static function validateParams($eventData)
+    private static function validateParams($request)
     {
         /*
          $paramWithRules = [
