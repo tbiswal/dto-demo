@@ -18,3 +18,16 @@ class PostDTO
         $this->authorId = $authorId;
     }
 }
+
+// In Php 8
+/*
+class PostDTO
+{
+    public function __construct(
+        public string $title,
+        public string $body,
+        public string $authorId
+    ) {
+    }
+}
+*/
