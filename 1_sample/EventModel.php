@@ -8,14 +8,14 @@ class EventModel
     private $eventCity;
     private $eventState;
 
-    public function save($eventData)
+    public function save($eventData): bool
     {
         $this->postalCode       = $eventData['postalCode'];
         $this->locationLatitude = $eventData['locationLatitude'];
         $this->eventCity        = $eventData['eventCity'];
         $this->eventState       = $eventData['eventState'];
 
-        $this->save(); // Save to DB
+//        $this->save(); // Save to DB
 
         return true;
     }
