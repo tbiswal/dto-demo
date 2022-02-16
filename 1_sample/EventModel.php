@@ -3,10 +3,10 @@ namespace sampleOne;
 
 class EventModel
 {
-    private $postalCode;
-    private $locationLatitude;
-    private $eventCity;
-    private $eventState;
+    private string $postalCode;
+    private string $locationLatitude;
+    private string $eventCity;
+    private string $eventState;
 
     public function save($eventData): bool
     {
